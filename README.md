@@ -17,6 +17,7 @@ Some of the concepts used are listed below:
 ## Repo Structure
 
 ### **History Analysis**
+<img src="images/11.png" width="30%"></img><img src="images/13.png" width="30%"></img><img src="images/14.png" width="30%"></img><img src="images/15.png" width="30%"></img><img src="images/16.png" width="30%"></img>
 
 > This data was requested from spotify website which included StreamingHistory, Playlist information and some personal data.
 
@@ -41,6 +42,10 @@ Some of the concepts used are listed below:
 
 ### **Music Taste Analyser**
 
+![](/images/21.png)
+TSNE Plot
+
+
 > We made an python script using `spotipy` library that created a dataset for each unique song features (which is provided by spotify itself).
 
 -   Box Plots based on song features
@@ -52,6 +57,7 @@ Some of the concepts used are listed below:
 
 ### **Comparative Analysis**
 
+<img src="images/31.png" width="40%"><img src="images/33.png" width="50%"></img></img><img src="images/32.png" width="50%"></img>
 > We used those spotify audio features of Jaimin and Mukul to perform an comparative analysis of songs tastes of them.
 
 -   Bar plots from Mean Values of those features.

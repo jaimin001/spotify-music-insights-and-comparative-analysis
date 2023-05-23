@@ -1,17 +1,21 @@
 import spotipy
 import pandas as pd
 from spotipy.oauth2 import SpotifyClientCredentials
+import os
+from dotenv import load_dotenv
 
-client_id = 'f65abe4b2f414904a0a793b742e7ec13'
-client_secret = '9ea9f4fe3188402f93bd99f74897b695'
-username = 'w5ezb9grmm4ufvytnaaeds3j4'
-redirect_uri = 'https://localhost:3000'
+load_dotenv()
+
+CLIENT_ID = os.getenv('CLIENT_ID');
+CLIENT_SECRET = os.getenv('CLIENT_SECRET');
+USERNAME = os.getenv('USERNAME');
+REDIRECT_URI = os.getenv('REDIRECT_URI');
 
 # Create a Spotify client object with client credentials
-client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
+client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
-data = pd.read_json('./mukul/StreamingHistory0.json')
+data = pd.read_json('./jaimin/StreamingHistory0.json')
 
 # Getting Audio features
 features_all = []
@@ -39,4 +43,4 @@ data_dt['popularity'] = popularity
 
 data_dt = data_dt.drop(columns=['Unnamed: 0', 'uri', 'track_href', 'analysis_url', 'type'])
 
-data_dt.to_csv('mukul_info.csv')
+data_dt.to_csv('jaimin_info.csv')
